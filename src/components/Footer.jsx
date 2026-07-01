@@ -25,7 +25,7 @@ function Footer() {
                 target={social.href.startsWith('http') ? '_blank' : undefined}
                 rel={social.href.startsWith('http') ? 'noreferrer' : undefined}
                 aria-label={social.label}
-                className="text-muted hover:text-purple-light transition-colors"
+                className="text-muted hover:text-accent transition-colors"
               >
                 <social.icon size={18} />
               </a>

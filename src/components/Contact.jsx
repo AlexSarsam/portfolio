@@ -26,15 +26,15 @@ function Contact() {
   return (
     <section id="contacto" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <motion.p
+        <motion.span
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-purple-light text-sm mb-2"
+          className="inline-block font-mono text-xs text-accent border border-accent/30 rounded px-2 py-1 mb-4"
         >
           04 /
-        </motion.p>
+        </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -66,9 +66,10 @@ function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col gap-3 p-6 rounded-2xl border border-line bg-surface hover:border-purple-light/50 hover:-translate-y-1 transition-all duration-300"
+              className="group relative overflow-hidden flex flex-col gap-3 p-6 rounded-2xl border border-line bg-surface hover:-translate-y-1 transition-all duration-300"
             >
-              <link.icon className="text-purple-light" size={22} />
+              <span className="absolute inset-x-0 top-0 h-0.5 w-0 bg-accent transition-all duration-300 group-hover:w-full" />
+              <link.icon className="text-accent" size={22} />
               <span className="text-sm text-muted">{link.label}</span>
               <span className="text-ink text-sm break-all">{link.value}</span>
             </motion.a>

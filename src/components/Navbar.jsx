@@ -22,14 +22,11 @@ function Navbar() {
   return (
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
-        scrolled ? 'bg-bg/80 backdrop-blur-md border-b border-line' : 'bg-transparent'
+        scrolled ? 'bg-bg/90 backdrop-blur-md border-b border-line' : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <a
-          href="#inicio"
-          className="font-display text-xl bg-gradient-to-r from-purple to-blue bg-clip-text text-transparent"
-        >
+        <a href="#inicio" className="font-display text-xl text-accent">
           AS
         </a>
 
@@ -38,9 +35,10 @@ function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-muted hover:text-ink transition-colors"
+                className="group relative text-sm text-muted hover:text-ink transition-colors"
               >
                 {link.label}
+                <span className="absolute left-0 -bottom-1 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />
               </a>
             </li>
           ))}

@@ -5,15 +5,15 @@ function Skills() {
   return (
     <section id="skills" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <motion.p
+        <motion.span
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-purple-light text-sm mb-2"
+          className="inline-block font-mono text-xs text-accent border border-accent/30 rounded px-2 py-1 mb-4"
         >
           03 /
-        </motion.p>
+        </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,9 +38,9 @@ function Skills() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.05 }}
-                    className="flex items-center gap-3 p-4 rounded-xl border border-line bg-surface hover:border-purple-light/50 hover:-translate-y-0.5 transition-all duration-300"
+                    className="flex items-center gap-3 p-4 rounded-xl border border-line bg-surface hover:border-accent/50 hover:-translate-y-0.5 transition-all duration-300"
                   >
-                    <item.icon className="text-blue-light shrink-0" size={20} />
+                    <item.icon className="text-accent shrink-0" size={20} />
                     <span className="text-sm text-ink">{item.name}</span>
                   </motion.div>
                 ))}

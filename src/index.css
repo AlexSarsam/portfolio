@@ -2,15 +2,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0a0a0f;
-  --color-surface: #18181b;
-  --color-purple: #8b5cf6;
-  --color-purple-light: #a78bfa;
-  --color-blue: #3b82f6;
-  --color-blue-light: #60a5fa;
-  --color-ink: #e4e4e7;
-  --color-muted: #a1a1aa;
-  --color-line: #27272a;
+  --color-bg: #0a0a0a;
+  --color-surface: #141412;
+  --color-ink: #f2f2ef;
+  --color-muted: #8f8f89;
+  --color-line: #262622;
+  --color-accent: #caff33;
+  --color-accent-dim: #9fe000;
 
   --font-display: "Space Grotesk", sans-serif;
   --font-sans: "Inter", sans-serif;
@@ -29,4 +27,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 500;
+}
+
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(202, 255, 51, 0.18) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
